@@ -1,11 +1,5 @@
 extends KinematicBody2D
 
-func _ready():
-	_draw()
-	
-func _draw():
-	draw_circle(Vector2(512, 300), 20, Color.green)
-	get_node("TestBase").position = Vector2(510, 200)
 
 var _velocity := Vector2.ZERO
 
