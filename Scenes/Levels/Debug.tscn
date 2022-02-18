@@ -13,5 +13,15 @@ extents = Vector2( 236, 20.5 )
 position = Vector2( 473, 419 )
 shape = SubResource( 1 )
 
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+margin_left = -480.0
+margin_top = -21.0
+margin_right = 571.0
+margin_bottom = -18.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 436, 289 )
