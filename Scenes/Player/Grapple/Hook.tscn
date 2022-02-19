@@ -15,7 +15,7 @@ cast_to = Vector2( 75, 0 )
 
 [node name="SnapDetector" parent="." instance=ExtResource( 4 )]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Cooldown" type="Timer" parent="."]
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 3 )
