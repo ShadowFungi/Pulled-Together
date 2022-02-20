@@ -14,70 +14,37 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -301.511
-margin_top = 44.0
-margin_right = 301.511
-margin_bottom = 120.0
+anchor_left = 0.198113
+anchor_top = 0.1
+anchor_right = 0.801887
+anchor_bottom = 0.258333
 custom_fonts/font = ExtResource( 3 )
 text = "Pulled Together"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Play" type="Button" parent="."]
-<<<<<<< HEAD
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -115.523
-margin_top = -28.5
-margin_right = 115.523
-margin_bottom = 28.5
-custom_fonts/font = ExtResource( 1 )
-anchor_left = 0.36377
-anchor_top = 0.440625
-anchor_right = 0.63623
-anchor_bottom = 0.559375
-custom_fonts/font = SubResource( 1 )
-text = "Play"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ItemShop" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -116.0
-margin_top = 70.0
-margin_right = 116.0
-margin_bottom = 131.0
-custom_fonts/font = ExtResource( 1 )
-text = "Item Shop"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
-[node name="Item Shop" type="Button" parent="."]
-anchor_left = 0.36377
-anchor_top = 0.440625
-anchor_right = 0.63623
-anchor_bottom = 0.559375
-margin_left = -0.000396729
-margin_top = 64.5
-margin_right = -0.000396729
-margin_bottom = 64.5
-custom_fonts/font = SubResource( 1 )
-text = "Shop"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[connection signal="pressed" from="Play" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="Item Shop" to="." method="_on_Start_pressed"]
+[node name="Play" type="Button" parent="."]
+anchor_left = 0.439306
+anchor_top = 0.440625
+anchor_right = 0.560694
+anchor_bottom = 0.559375
+custom_fonts/font = ExtResource( 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ItemShop" type="Button" parent="."]
+anchor_left = 0.372282
+anchor_top = 0.716667
+anchor_right = 0.627718
+anchor_bottom = 0.835417
+custom_fonts/font = ExtResource( 1 )
+text = "Item Shop"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="ItemShop" to="." method="_on_ItemShop_pressed"]
