@@ -6,7 +6,7 @@ export var speed := 600.0
 export var jump_strength := 1500.0
 export var max_jumps := 2
 export var double_jump_strength := 1200.0
-export var gravity := 7000.0
+export var gravity := 7000
 
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
