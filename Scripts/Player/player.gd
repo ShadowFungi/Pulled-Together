@@ -16,6 +16,7 @@ func _apply_gravity(delta):
 	_velocity.y += gravity * delta
 
 func apply_movement():
+	$Arrow.contact()
 	var _horizontal_direction = (
 		Input.get_action_strength("move_right")
 		- Input.get_action_strength("move_left")
