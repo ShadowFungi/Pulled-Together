@@ -10,23 +10,39 @@ var posit : Array
 
 func contact():
 	mouse.set_global_position(get_global_mouse_position())
-	ray.look_at(get_global_mouse_position())
-	posit = [position, ray.get_cast_to()]
-	if mouse.position.y != self.position.y:
+	if mouse.position.x > 0:
 		if mouse.position.x < 250:
-			if mouse.position.x > self.position.x:
-				ray.cast_to.x = mouse.position.x
-			elif mouse.position.x < self.position.x:
-				ray.cast_to.x = -mouse.position.x
-				
-	elif mouse.position.x != self.position.x:
+			ray.cast_to = mouse.position
+		else:
+			ray.cast_to = mouse.position
+			while ray.cast_to.x > 250:
+				ray.cast_to.x -= 1
+	elif mouse.position.x < 0:
+		if mouse.position.x > -250:
+			ray.cast_to = mouse.position
+		else:
+			ray.cast_to = mouse.position
+			while ray.cast_to.x < -250:
+				ray.cast_to.x += 1
+	if mouse.position.y > 0:
 		if mouse.position.y < 250:
-			if mouse.position.y > self.position.y:
-				ray.cast_to.x = mouse.position.y
-			elif mouse.position.y < self.position.y:
-				ray.cast_to.x = -mouse.position.y
-				
+			ray.cast_to = mouse.position
+		else:
+			ray.cast_to = mouse.position
+			while ray.cast_to.y > 250:
+				ray.cast_to.y -= 1
+	elif mouse.position.y < 0:
+		if mouse.position.y > -250:
+			ray.cast_to = mouse.position
+		else:
+			ray.cast_to = mouse.position
+			while ray.cast_to.y < -250:
+				ray.cast_to.y += 1
 	else:
-		ray.cast_to.x = 250
-		
+		ray.cast_to = mouse.position
+		while ray.cast_to.x < -250:
+			ray.cast_to.x += 1
+		while ray.cast_to.y < -250:
+			ray.cast_to.y += 1
+	posit = [position, ray.get_cast_to()]
 	tail.set_points(PoolVector2Array(posit))
