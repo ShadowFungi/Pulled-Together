@@ -1,15 +1,22 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Player/player.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Player/PlayerFSM.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Player/Grapple/Arrow.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.0
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0
 height = 35.0
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Player" type="RigidBody2D"]
 collision_layer = 2
+mode = 2
+mass = 1.5
+physics_material_override = SubResource( 2 )
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 1 )
 
 [node name="Arrow" parent="." instance=ExtResource( 3 )]
@@ -29,5 +36,4 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource( 2 )
+[node name="JustAiredTimer" type="Timer" parent="."]

@@ -13,14 +13,13 @@ script = ExtResource( 1 )
 cast_to = Vector2( 250, 0 )
 
 [node name="Tail" type="Line2D" parent="RayCast2D"]
-points = PoolVector2Array( 0, 0, 138, 0 )
+points = PoolVector2Array( 0, 0, 250, 0 )
 width = 20.0
 default_color = Color( 0.628906, 0.628906, 0.628906, 1 )
 texture = ExtResource( 2 )
 texture_mode = 1
 
 [node name="Head" type="Sprite" parent="."]
-visible = false
 rotation = 1.5708
 texture = ExtResource( 2 )
 region_enabled = true
