@@ -6,9 +6,8 @@
 [sub_resource type="PhysicsMaterial" id=2]
 friction = 0.0
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 15.0
-height = 35.0
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15, 32 )
 
 [node name="Player" type="RigidBody2D"]
 collision_layer = 2
@@ -31,7 +30,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

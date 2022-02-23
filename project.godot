@@ -138,11 +138,6 @@ _global_script_classes=[ {
 "class": "SS2D_VertexProperties",
 "language": "GDScript",
 "path": "res://addons/rmsmartshape/vertex_properties.gd"
-}, {
-"base": "Node",
-"class": "StateMachine",
-"language": "GDScript",
-"path": "res://Scripts/Player/StateMachine.gd"
 } ]
 _global_script_class_icons={
 "RMS2D_Material": "",
@@ -170,8 +165,7 @@ _global_script_class_icons={
 "SS2D_Shape_Open": "res://addons/rmsmartshape/assets/open_shape.png",
 "SS2D_Shape_Render": "",
 "SS2D_Strings": "",
-"SS2D_VertexProperties": "",
-"StateMachine": ""
+"SS2D_VertexProperties": ""
 }
 
 [application]

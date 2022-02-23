@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 
+# constant variables
 const WALK_ACCEL = 550.0
 const WALK_DEACCEL = 550.0
 const WALK_MAX_VELOCITY = 190.0
@@ -11,24 +12,26 @@ const STOP_JUMP_FORCE = 450.0
 const MAX_SHOOT_POSE_TIME = 0.3
 const MAX_FLOOR_AIRBORNE_TIME = 0.15
 
+# action varialbes
 var anim = ""
 var siding_left = false
 var jumping = false
 var stopping_jump = false
-var shooting = false
 
 var floor_h_velocity = 0.0
 
 var airborne_time = 1e20
-var shoot_time = 1e20
 
 func _integrate_forces(s):
+	# movement variables
 	var lv = s.get_linear_velocity()
 	var step = s.get_step()
 	
+	# animation variables
 	var new_anim = anim
 	var new_siding_left = siding_left
 	
+	# input variables
 	var move_left = Input.is_action_pressed("move_left")
 	var move_right = Input.is_action_pressed("move_right")
 	var jump = Input.is_action_pressed("jump")
@@ -39,6 +42,7 @@ func _integrate_forces(s):
 	var found_floor = false
 	var floor_index = -1
 	
+	# find floor
 	for x in range(s.get_contact_count()):
 		var ci = s.get_contact_local_normal(x)
 	
@@ -88,15 +92,9 @@ func _integrate_forces(s):
 		if jumping:
 			new_anim = "jumping"
 		elif abs(lv.x) < 0.1:
-			if shoot_time < MAX_SHOOT_POSE_TIME:
-				new_anim = "idle_weapon"
-			else:
-				new_anim = "idle"
+			new_anim = "idle"
 		else:
-			if shoot_time < MAX_SHOOT_POSE_TIME:
-				new_anim = "run_weapon"
-			else:
-				new_anim = "run"
+			new_anim = "run"
 	else:
 		if move_left and not move_right:
 			if lv.x > -WALK_MAX_VELOCITY:
@@ -113,16 +111,10 @@ func _integrate_forces(s):
 			lv.x = sign(lv.x) * xv
 			
 		if lv.y < 0:
-			if shoot_time < MAX_SHOOT_POSE_TIME:
-				new_anim = "jumping_weapon"
-			else:
-				new_anim = "jumping"
+			new_anim = "jumping"
 		else:
-			if shoot_time < MAX_SHOOT_POSE_TIME:
-				new_anim = "falling_weapon"
-			else:
-				new_anim = "falling"
-				
+			new_anim = "falling"
+			
 	if new_siding_left != siding_left:
 		siding_left = new_siding_left
 		

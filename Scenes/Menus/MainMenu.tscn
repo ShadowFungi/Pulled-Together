@@ -41,6 +41,7 @@ anchor_top = 0.716667
 anchor_right = 0.627718
 anchor_bottom = 0.835417
 custom_fonts/font = ExtResource( 1 )
+disabled = true
 text = "Item Shop"
 __meta__ = {
 "_edit_use_anchors_": true
