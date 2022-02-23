@@ -35,14 +35,11 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="ConnectPointTop" type="DampedSpringJoint2D" parent="."]
+[node name="ConnectPointTop" type="PinJoint2D" parent="."]
 position = Vector2( 0, -10 )
 rotation = -3.14159
 bias = 0.9
 disable_collision = false
-length = 25.0
-stiffness = 64.0
-damping = 16.0
 
 [node name="CTArea2D" type="Area2D" parent="."]
 position = Vector2( 0, -10 )
@@ -53,14 +50,11 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CTArea2D"]
 shape = SubResource( 2 )
 
-[node name="ConnectPointRight" type="DampedSpringJoint2D" parent="."]
+[node name="ConnectPointRight" type="PinJoint2D" parent="."]
 position = Vector2( 10, 0 )
 rotation = -1.5708
 bias = 0.9
 disable_collision = false
-length = 25.0
-stiffness = 64.0
-damping = 16.0
 
 [node name="CRArea2D" type="Area2D" parent="."]
 position = Vector2( 10, 0 )
@@ -71,13 +65,10 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CRArea2D"]
 shape = SubResource( 3 )
 
-[node name="ConnectPointBottom" type="DampedSpringJoint2D" parent="."]
+[node name="ConnectPointBottom" type="PinJoint2D" parent="."]
 position = Vector2( 0, 10 )
 bias = 0.9
 disable_collision = false
-length = 25.0
-stiffness = 64.0
-damping = 16.0
 
 [node name="CBArea2D" type="Area2D" parent="."]
 position = Vector2( 0, 10 )
@@ -88,14 +79,11 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CBArea2D"]
 shape = SubResource( 4 )
 
-[node name="ConnectPointLeft" type="DampedSpringJoint2D" parent="."]
+[node name="ConnectPointLeft" type="PinJoint2D" parent="."]
 position = Vector2( -10, 0 )
 rotation = 1.5708
 bias = 0.9
 disable_collision = false
-length = 25.0
-stiffness = 64.0
-damping = 16.0
 
 [node name="CLArea2D" type="Area2D" parent="."]
 position = Vector2( -10, 0 )

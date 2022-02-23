@@ -8,24 +8,24 @@ onready var CL = $ConnectPointLeft
 var nod : NodePath
 
 func _on_CTArea2D_body_entered(body):
-	CT.set_node_a(NodePath("Player"))
-	CT.set_node_b(NodePath("Crate"))
+	CT.set_node_a(get_parent().get_node("Player").get_path())
+	CT.set_node_b(self.get_path())
 	print("CT/" + CT.node_a)
 
 
 func _on_CRArea2D_body_entered(body):
-	CR.set_node_a(NodePath("Player"))
-	CR.set_node_b(NodePath("Crate"))
+	CR.set_node_a(get_parent().get_node("Player").get_path())
+	CR.set_node_b(self.get_path())
 	print("CR/" + CR.node_a)
 
 
 func _on_CBArea2D_body_entered(body):
-	CB.set_node_a(NodePath("Player"))
-	CB.set_node_b(NodePath("Crate"))
+	CB.set_node_a(get_parent().get_node("Player").get_path())
+	CB.set_node_b(self.get_path())
 	print("CB/" + CB.node_a)
 
 
 func _on_CLArea2D_body_entered(body):
-	CL.set_node_a(NodePath("Player"))
-	CL.set_node_b(NodePath("Crate"))
+	CL.set_node_a(get_parent().get_node("Player").get_path())
+	CL.set_node_b(self.get_path())
 	print("CL/" + CL.node_a)
