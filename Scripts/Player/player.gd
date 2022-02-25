@@ -36,6 +36,7 @@ func _integrate_forces(s):
 	var move_right = Input.is_action_pressed("move_right")
 	var jump = Input.is_action_pressed("jump")
 	
+	
 	lv.x -= floor_h_velocity
 	floor_h_velocity = 0.0
 	
@@ -129,6 +130,6 @@ func _integrate_forces(s):
 	s.set_linear_velocity(lv)
 
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("grapple"):
 		$Arrow.contact()
