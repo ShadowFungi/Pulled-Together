@@ -161,6 +161,15 @@ position = Vector2( 358, 241 )
 [node name="Crate" parent="." instance=ExtResource( 2 )]
 position = Vector2( 227, 259 )
 
+[node name="Crate2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 745, 404 )
+
+[node name="Crate3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 647, 214 )
+
+[node name="Crate4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 314 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 510.697, 559.001 )
 
@@ -186,5 +195,3 @@ polygon = PoolVector2Array( -544.995, -372.612, -386.157, -96.6537, 222.465, -59
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( -510.697, -559.001 )
 polygon = PoolVector2Array( -34.2984, 186.388, 124.54, 462.347, 733.162, 499.446, 770.838, 287.374, 977.888, 229.768, 893.089, 686.513, -112.037, 493.42, -54.8976, 31.3006 )
-
-[editable path="Crate"]
